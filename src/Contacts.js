@@ -1,24 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 function Contacts() {
   const Container = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: auto;
-    border: 2px solid red;
+    // border: 2px solid red;
     height: auto;
-    padding: 0px 0px 0px 20px;
   `;
 
   const Title = styled.h1`
     font-size: 1.5em;
     text-align: center;
     color: palevioletred;
-    border: 2px solid blue;
+    // border: 2px solid blue;
     height: auto;
+    width: 85%;
     display: flex;
   `;
 
@@ -26,9 +27,22 @@ function Contacts() {
     display: flex;
     height: 30px;
     align-items: center;
-    border: 2px solid green;
-    width: 25%;
+    width: auto;
     font-size: 13px;
+    color: grey;
+    // border: 2px solid red;
+    margin: 0px 20px 0px 0px;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      color: black;
+    }
+
+    &:active {
+      cursor: pointer;
+      transform: scale(1);
+    }
   `;
   // font-size affects icon sizing
 

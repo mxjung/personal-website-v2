@@ -9,33 +9,34 @@ function Navigation() {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 2px solid red;
+    // border: 2px solid red;
     height: auto;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     line-height: 100%;
+    margin-top: 20px;
   `;
 
   const NavList = styled.ul`
     display: flex;
     flex-direction: column;
     align-items: left;
-    border: 2px solid blue;
+    // border: 2px solid blue;
   `;
 
   const NavListItem = styled.li`
-    color: #333;
+    color: grey;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     list-style-type: none;
 
     margin-bottom: 15px;
-    margin-left: -18px;
+    margin-left: -15px;
 
     transform-origin: bottom left;
-    transition: all .2s ease-in-out;
+    transition: all .4s ease-in-out;
 
     &:hover {
       color: black;
@@ -44,6 +45,7 @@ function Navigation() {
     }
 
     & > .active {
+      color: black;
       border-bottom: 2px solid #333;
       transform: scale(1.05);
   `;
@@ -84,10 +86,10 @@ function Navigation() {
               to="section1"
               spy={true}
               smooth={true}
-              offset={-50}
+              offset={0}
               duration={500}
             >
-              01 Work History
+              01 Things I've Built
             </Link>
           </NavListItem>
           <NavListItem>
@@ -96,10 +98,22 @@ function Navigation() {
               to="section2"
               spy={true}
               smooth={true}
-              offset={-50}
+              offset={0}
               duration={500}
             >
-              02 Education
+              02 Work Experience
+            </Link>
+          </NavListItem>
+          <NavListItem>
+            <Link
+              activeClass="active"
+              to="section3"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              03 Education
             </Link>
           </NavListItem>
         </NavList>
