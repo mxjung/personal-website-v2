@@ -4,6 +4,8 @@ import Contacts from "./Contacts";
 import IntroCard from "./IntroCard";
 import ProjectList from "./ProjectList";
 import WorkList from "./WorkList";
+import EducationList from "./EducationList";
+import Resume from "./Resume";
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -69,6 +71,8 @@ function App() {
         <ScrollPanel>
           <ProjectList />
           <WorkList />
+          <EducationList />
+          <Resume />
         </ScrollPanel>
       </AppDetail >
     </Container >

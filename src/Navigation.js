@@ -2,7 +2,6 @@ import React from 'react';
 import './Navigation.css';
 import styled from 'styled-components';
 import { Link, animateScroll as scroll } from "react-scroll";
-import Resume from "./docs/max-jung-resume-v3.pdf";
 
 const Profile = styled.div`
   display: flex;
@@ -52,10 +51,6 @@ const NavListItem = styled.li`
 // margin left due to weird offset
 
 function Navigation() {
-  function resumeHandler() {
-    window.open(Resume);
-  }
-
   return (
     <>
       <Profile>
@@ -97,9 +92,16 @@ function Navigation() {
             </Link>
           </NavListItem>
           <NavListItem>
-            <div onClick={resumeHandler} >
-              04 Resume
-            </div>
+            <Link
+              activeClass="active"
+              to="section4"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              04 Resume / Bio
+            </Link>
           </NavListItem>
         </NavList>
       </Profile>

@@ -1,4 +1,13 @@
+import livestackLogo from "./images/livestack-logo.png";
+
 const workData = [
+  {
+    title: "Junior Software Engineer",
+    company: 'LiveStack',
+    duration: 'Jun 2020 - Jun 2020',
+    tasks: ['Developed and maintained backend Express program for automating Stripe API refunds using cron jobs. Used fake timers to write Jest tests to verify success of automation.', 'Expanded existing PostgreSQL DB and Express API to handle new client-side interactions.', 'Wrote and maintained Jest test files for unit and integration testing, both for React and for Express.'],
+    imageUrl: livestackLogo
+  },
   {
     title: "Systems Design Engineer",
     company: 'Siemens AG',

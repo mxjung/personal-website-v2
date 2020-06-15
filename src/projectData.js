@@ -1,5 +1,6 @@
 import warblerLogo from './images/warbler-logo.png';
 import microblogLogo from './images/microblog-logo.png';
+import joblyLogo from './images/jobly-logo.png';
 
 const projectData = [
   {
@@ -16,7 +17,7 @@ const projectData = [
     description: "Site where users can create an account and apply for jobs using a searchbar",
     stack: ["PostgreSQL", "Express", "React", "Node.js"],
     tools: ["axios", "JSON Web Token", "Bcrypt", "Jest"],
-    imageUrl: warblerLogo,
+    imageUrl: joblyLogo,
     githubLink: 'https://github.com/mxjung/react-jobly',
     websiteLink: ''
   },

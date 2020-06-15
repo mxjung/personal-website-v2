@@ -3,8 +3,6 @@ import "./ProjectList.css";
 import styled from 'styled-components';
 import Project from './Project';
 import projectData from "./projectData";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const Container = styled.div`
@@ -28,10 +26,6 @@ const Title = styled.h1`
 `;
 
 function ProjectList() {
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
-
   return (
     <Container>
       <div id="section1" >
