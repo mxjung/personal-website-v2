@@ -15,11 +15,17 @@ const Container = styled.div`
   // background-color: #a8b2d1;
   border-radius: 4px;
 
-  transition: all .2s ease-in-out;
 
   &:hover {
+    transition: all .2s ease-in-out;
     // transform: scale(1.05);
     background-color: rgb(235, 235, 235);
+
+    // img {
+    //   transition: all .18s ease-in-out;
+    //   opacity: 0.5;
+    //   filter: alpha(opacity=100);
+    // }
   }
 
   &:active {
@@ -47,11 +53,23 @@ const Description = styled.div`
   font-weight: 500;
   line-height: 150%;
   color: rgb(120, 120, 120);
-  margin: 10px 0px;
+  margin: 10px 0px 5px 0px;
+`;
+
+const Information = styled.div`
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  line-height: 150%;
+  color: rgb(120, 120, 120);
+  margin: 5px 0px 0px 0px;
 `;
 
 const List = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  line-height: 130%;
 `;
 
 const ListItem = styled.div`
@@ -65,7 +83,8 @@ const ListItem = styled.div`
 const LeftPanel = styled.div`
   display: flex;
   flex-direction: column;
-  width: 75%;
+  padding: 0px 15px 0px 0px;
+  width: 60%;
   // border: 2px solid green;
 `;
 
@@ -73,7 +92,7 @@ const RightPanel = styled.div`
   display: flex;
   flex-direction: column;
   // flex-grow: 1;
-  width: 25%;
+  width: 40%;
   align-items: center;
   justify-content: center;
   // border: 2px solid red;
@@ -99,7 +118,7 @@ const IconLink = styled.div`
 function Project({
   title,
   description,
-  frameworks,
+  stack,
   tools,
   imageUrl,
   githubLink,
@@ -108,28 +127,8 @@ function Project({
   return (
     <Container>
       <LeftPanel>
-        <Title>{title}</Title>
-        <Description>{description}</Description>
         <List>
-          {frameworks.map(framework => (
-            <ListItem>
-              <FontAwesomeIcon icon={faChevronRight} size='sm' style={{ 'margin-right': '4px' }} />
-              {framework}
-            </ListItem>
-          ))}
-        </List>
-        <List>
-          {tools.map(tool => (
-            <ListItem>
-              <FontAwesomeIcon icon={faChevronRight} size='sm' style={{ 'margin-right': '4px' }} />
-              {tool}
-            </ListItem>
-          ))}
-        </List>
-      </LeftPanel>
-      <RightPanel>
-        <img src={imageUrl} alt="project-pic" style={{ 'width': '50%', 'height': 'auto', 'margin-bottom': '10px' }} />
-        <List>
+          <Title>{title}</Title>
           <a href={githubLink}>
             <IconLink>
               <FontAwesomeIcon icon={faGithub} style={{ 'font-size': '20px' }} />
@@ -141,6 +140,31 @@ function Project({
             </IconLink>
           </a>
         </List>
+        <Description>{description}</Description>
+        <Information>
+          <div style={{'font-weight': '700'}}>Stack:</div>
+          {stack.map((s,idx) => {
+          if (idx === stack.length-1) {
+            return s;
+          } else {
+            return ` ${s} / `;
+          }
+        })}
+        </Information>
+        <Information>
+          <div style={{'font-weight': '700'}}>Packages:</div>
+          <List>
+            {tools.map(tool => (
+              <ListItem>
+                <FontAwesomeIcon icon={faChevronRight} size='sm' style={{ 'margin-right': '4px' }} />
+                {tool}
+              </ListItem>
+            ))}
+          </List>
+        </Information>
+      </LeftPanel>
+      <RightPanel>
+        <img src={imageUrl} alt="project-pic" style={{ 'width': '100%', 'height': 'auto'}} />
       </RightPanel>
     </Container>
   );

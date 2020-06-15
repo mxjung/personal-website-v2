@@ -42,7 +42,7 @@ function ProjectList() {
           <Project
             title={project.title}
             description={project.description}
-            frameworks={project.frameworks}
+            stack={project.stack}
             tools={project.tools}
             imageUrl={project.imageUrl}
             githubLink={project.githubLink}
