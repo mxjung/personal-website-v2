@@ -2,7 +2,7 @@ import React from 'react';
 import './IntroCard.css';
 import Navigation from "./Navigation";
 import styled from 'styled-components';
-import profilePicSrc from "./images/profile-pic.jpg";
+// import profilePicSrc from "./images/profile-pic.jpg";
 import ProfileCarousel from "./ProfileCarousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
