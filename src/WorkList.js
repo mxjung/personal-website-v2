@@ -3,6 +3,7 @@ import "./ProjectList.css";
 import styled from 'styled-components';
 import Work from './Work';
 import workData from "./workData";
+import { v4 as uuidv4 } from "uuid";
 
 const Container = styled.div`
   display: flex;
@@ -33,6 +34,7 @@ function WorkList() {
         </Title>
         {workData.map(work => (
           <Work
+            key={uuidv4()}
             title={work.title}
             company={work.company}
             duration={work.duration}

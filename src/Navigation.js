@@ -1,7 +1,7 @@
 import React from 'react';
 import './Navigation.css';
 import styled from 'styled-components';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 const Profile = styled.div`
   display: flex;

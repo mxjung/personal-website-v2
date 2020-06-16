@@ -3,7 +3,7 @@ import "./ProjectList.css";
 import styled from 'styled-components';
 import Project from './Project';
 import projectData from "./projectData";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { v4 as uuidv4 } from "uuid";
 
 const Container = styled.div`
   display: flex;
@@ -29,11 +29,12 @@ function ProjectList() {
   return (
     <Container>
       <div id="section1" >
-        <Title style={{ 'margin-top': '20px' }} >
+        <Title style={{ 'marginTop': '20px' }} >
           Things I've Built
         </Title>
         {projectData.map(project => (
           <Project
+            key={uuidv4()}
             title={project.title}
             description={project.description}
             stack={project.stack}

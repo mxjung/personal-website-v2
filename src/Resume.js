@@ -1,7 +1,7 @@
 import React from 'react';
 import "./ProjectList.css";
 import styled from 'styled-components';
-import { Link, animateScroll as scroll } from "react-scroll";
+// import { animateScroll as scroll } from "react-scroll";
 import ResumePdf from "./docs/max-jung-resume-v3.pdf";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
@@ -66,7 +66,7 @@ const IconLink = styled.div`
 
   &:hover {
     cursor: pointer;
-    transform: scale(1.15);
+    transform: scale(1.04);
     color: black;
     cursor: pointer;
   }
@@ -86,9 +86,10 @@ const Header = styled.div`
 `;
 
 function Resume() {
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
+  // Scrolling up to the top
+  // const scrollToTop = () => {
+  //   scroll.scrollToTop();
+  // };
 
   const resumeHandler = () => {
     window.open(ResumePdf);
@@ -97,14 +98,14 @@ function Resume() {
   return (
     <Container>
       <div id="section4" >
-        <Title style={{ 'margin-top': '20px' }} >
+        <Title style={{ 'marginTop': '20px' }} >
           Resume / Bio
         </Title>
         <ListItem>
           <IconLink onClick={resumeHandler}>
-            <FontAwesomeIcon icon={faExternalLinkAlt} style={{'font-size':'14px', 'margin-right':'4px' }} />
+            <FontAwesomeIcon icon={faExternalLinkAlt} style={{'fontSize':'14px', 'marginRight':'4px' }} />
+            Link to Resume
           </IconLink>
-          Link to Resume
         </ListItem>
         <ContainerCard>
           <Description>
@@ -112,12 +113,10 @@ function Resume() {
               Background
             </Header>
             I was born and raised in South Korea, and on my 8th birthday, my parents, older sister, younger brother, and I immigrated to the United States. I lived in Kansas and Missouri for 2 years combined (my mother had two sisters who lived in Missouri), before moving to sunny Southern California (specifically, right next to Six Flags Magic Mountain). I lived there until 2013, when I moved up to the Bay Area to attend UC Berkeley. Ever since, I've been studying and working in and around East Bay.
-            <Header style={{'margin-top':'10px'}}>
+            <Header style={{'marginTop':'10px'}}>
               My Interest in Software
             </Header>
             Like a lot of people, I struggled to find what kind of work I wanted to do. In highschool I wanted to be an architect, but I panicked and applied as Pre-Med for college. And once I came into college, I spent 2 years trying - and finally succeeding - to change my major to Civil Engineering. I didn't mind the major, but in my first semester of Senior year of my undergraduate, I took a course on microcontrollers, and the Professor taught us a little bit of HTML, CSS, and Bootstrap. I thought all of it was really cool, so I decided to stay an extra year to complete my Masters, taking courses similar to the one that I enjoyed. Long story short, I spent my graduate years and internship learning bits and pieces of programming, but I never had a full grasp of any particular technology/skill to be able to actually produce something. While working at Siemens as an HVAC Systems Engineer, I spent my after-work hours taking Udemy courses on web design. It reminded me a lot of the technology I fell in love with during college, which gave me the conviction to actually learn this... thing... that gave me so much fulfillment. That's when I decided to attend Rithm School.
-
-
           </Description>
         </ContainerCard>
       </div>

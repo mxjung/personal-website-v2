@@ -46,6 +46,7 @@ const TitleCard = styled.div`
 
 const Card = styled.div`
   display: flex;
+  padding: 0px 5px 0px 0px;
 `;
 
 
@@ -75,8 +76,8 @@ const Duration = styled.div`
   line-height: 150%;
   display: flex;
   width: 70px;
+  min-width: 70px;
   color: rgb(120, 120, 120);
-  // border: 2px solid blue;
 `;
 
 const List = styled.div`
@@ -119,7 +120,7 @@ const IconLink = styled.div`
 
   &:hover {
     cursor: pointer;
-    transform: scale(1.15);
+    transform: scale(1.03);
     color: black;
     cursor: pointer;
   }
@@ -141,7 +142,7 @@ function EducationList() {
           <TitleCard>
             <Card>
               <img src="https://ieor.berkeley.edu/wp-content/uploads/2017/05/berkeley-engineering-logo.jpg" alt="education-pic" style={{ 'height': '40px' }} />
-              <div style={{ 'display': 'flex', 'flex-direction': 'column', 'margin-left': '10px' }}>
+              <div style={{ 'display': 'flex', 'flexDirection': 'column', 'marginLeft': '10px' }}>
                 <Degree>{'M.S. Systems Engineering'}</Degree>
                 <College>{'UC Berkeley'}</College>
               </div>
@@ -154,28 +155,28 @@ function EducationList() {
             </Description>
             <TitleProjects>Projects</TitleProjects>
             <ListItem>
-              <a href='https://maxjungblog.wordpress.com/portfolio/nanjing-metro-system-optimization/'>
+              <a href='https://maxjungblog.wordpress.com/portfolio/nanjing-metro-system-optimization/' target="_blank" rel="noopener noreferrer" style={{'textDecoration':'none'}}>
                 <IconLink>
-                  <FontAwesomeIcon icon={faExternalLinkAlt} style={{'font-size':'12px', 'margin-right':'4px' }} />
+                  <FontAwesomeIcon icon={faExternalLinkAlt} style={{'fontSize':'12px', 'marginRight':'6px' }} />
+                  Nanjiing Metro System Optimization
                 </IconLink>
               </a>
-              Nanjiing Metro System Optimization
             </ListItem>
             <ListItem>
-              <a href='https://maxjungblog.wordpress.com/portfolio/wind-power/'>
+              <a href='https://maxjungblog.wordpress.com/portfolio/wind-power/' target="_blank" rel="noopener noreferrer" style={{'textDecoration':'none'}}>
                 <IconLink>
-                  <FontAwesomeIcon icon={faExternalLinkAlt} style={{'font-size':'12px', 'margin-right':'4px' }} />
+                  <FontAwesomeIcon icon={faExternalLinkAlt} style={{'fontSize':'12px', 'marginRight':'4px' }} />
+                  Marin County Wind Power Research
                 </IconLink>
               </a>
-              Marin County Wind Power Research
             </ListItem>
             <ListItem>
-              <a href='https://maxjungblog.wordpress.com/portfolio/openseats/'>
+              <a href='https://maxjungblog.wordpress.com/portfolio/openseats/' target="_blank" rel="noopener noreferrer" style={{'textDecoration':'none'}}>
                 <IconLink>
-                  <FontAwesomeIcon icon={faExternalLinkAlt} style={{'font-size':'12px', 'margin-right':'4px' }} />
+                  <FontAwesomeIcon icon={faExternalLinkAlt} style={{'fontSize':'12px', 'marginRight':'4px' }} />
+                  OpenSeat IoT Prototype
                 </IconLink>
               </a>
-              OpenSeat IoT Prototype
             </ListItem>
           </List>
         </ContainerCard>
@@ -183,7 +184,7 @@ function EducationList() {
           <TitleCard>
             <Card>
               <img src="https://ieor.berkeley.edu/wp-content/uploads/2017/05/berkeley-engineering-logo.jpg" alt="education-pic" style={{ 'height': '40px' }} />
-              <div style={{ 'display': 'flex', 'flex-direction': 'column', 'margin-left': '10px' }}>
+              <div style={{ 'display': 'flex', 'flexDirection': 'column', 'marginLeft': '10px' }}>
                 <Degree>{'B.S. Civil and Environmental Engineering'}</Degree>
                 <College>{'UC Berkeley'}</College>
               </div>
@@ -196,28 +197,28 @@ function EducationList() {
             </Description>
             <TitleProjects>Projects</TitleProjects>
             <ListItem>
-              <a href='https://maxjungblog.wordpress.com/portfolio/focal-solar-power-cooker/'>
+              <a href='https://maxjungblog.wordpress.com/portfolio/focal-solar-power-cooker/' target="_blank" rel="noopener noreferrer" style={{'textDecoration':'none'}}>
                 <IconLink>
-                  <FontAwesomeIcon icon={faExternalLinkAlt} style={{'font-size':'12px', 'margin-right':'4px' }} />
+                  <FontAwesomeIcon icon={faExternalLinkAlt} style={{'fontSize':'12px', 'marginRight':'4px' }} />
+                  IoT Solar Powered Cooker (using Arduino)
                 </IconLink>
               </a>
-              IoT Solar Powered Cooker (using Arduino)
             </ListItem>
             <ListItem>
-              <a href='https://maxjungblog.wordpress.com/portfolio/ford-inspire/'>
+              <a href='https://maxjungblog.wordpress.com/portfolio/ford-inspire/' target="_blank" rel="noopener noreferrer" style={{'textDecoration':'none'}}>
                 <IconLink>
-                  <FontAwesomeIcon icon={faExternalLinkAlt} style={{'font-size':'12px', 'margin-right':'4px' }} />
+                  <FontAwesomeIcon icon={faExternalLinkAlt} style={{'fontSize':'12px', 'marginRight':'4px' }} />
+                  Ford Inspire Visual Design Project
                 </IconLink>
               </a>
-              Ford Inspire Visual Design Project
             </ListItem>
             <ListItem>
-              <a href='https://maxjungblog.wordpress.com/portfolio/inception-poster/'>
+              <a href='https://maxjungblog.wordpress.com/portfolio/inception-poster/' target="_blank" rel="noopener noreferrer" style={{'textDecoration':'none'}}>
                 <IconLink>
-                  <FontAwesomeIcon icon={faExternalLinkAlt} style={{'font-size':'12px', 'margin-right':'4px' }} />
+                  <FontAwesomeIcon icon={faExternalLinkAlt} style={{'fontSize':'12px', 'marginRight':'4px' }} />
+                  Visual Design Inception Movie Poster
                 </IconLink>
               </a>
-              Visual Design Inception Movie Poster
             </ListItem>
           </List>
         </ContainerCard>

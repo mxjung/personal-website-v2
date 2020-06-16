@@ -56,14 +56,18 @@ function Contacts() {
   return (
     <Container>
       <Title>
-        <Icon>
-          <FontAwesomeIcon icon={faGithub} size='lg' />
-          <IconName>Github</IconName>
-        </Icon>
-        <Icon>
-          <FontAwesomeIcon icon={faLinkedin} size='lg' />
-          <IconName>LinkedIn</IconName>
-        </Icon>
+        <a href='https://github.com/mxjung' target="_blank" rel="noopener noreferrer" style={{'textDecoration':'none'}}>
+          <Icon>
+            <FontAwesomeIcon icon={faGithub} size='lg' />
+            <IconName>Github</IconName>
+          </Icon>
+        </a>
+        <a href='https://www.linkedin.com/in/mxjung/' target="_blank" rel="noopener noreferrer" style={{'textDecoration':'none'}}>
+          <Icon>
+            <FontAwesomeIcon icon={faLinkedin} size='lg' />
+            <IconName>LinkedIn</IconName>
+          </Icon>
+        </a>
       </Title>
     </Container>
   );

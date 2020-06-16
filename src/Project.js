@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { v4 as uuidv4 } from "uuid";
 
 const Container = styled.div`
   display: flex;
@@ -38,13 +39,6 @@ const Title = styled.div`
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   color: rgb(70, 70, 70);
-`;
-
-const ExternalLinks = styled.div`
-  display: flex;
-  align-items: center;
-  border: 2px solid green;
-  margin-left: 20px;
 `;
 
 const Description = styled.div`
@@ -129,20 +123,20 @@ function Project({
       <LeftPanel>
         <List>
           <Title>{title}</Title>
-          <a href={githubLink}>
+          <a href={githubLink} target="_blank" rel="noopener noreferrer">
             <IconLink>
-              <FontAwesomeIcon icon={faGithub} style={{ 'font-size': '20px' }} />
+              <FontAwesomeIcon icon={faGithub} style={{ 'fontSize': '20px' }} />
             </IconLink>
           </a>
-          <a href={websiteLink}>
+          <a href={websiteLink} target="_blank" rel="noopener noreferrer">
             <IconLink>
-              <FontAwesomeIcon icon={faExternalLinkAlt} style={{ 'font-size': '20px' }} />
+              <FontAwesomeIcon icon={faExternalLinkAlt} style={{ 'fontSize': '20px' }} />
             </IconLink>
           </a>
         </List>
         <Description>{description}</Description>
         <Information>
-          <div style={{'font-weight': '700'}}>Stack:</div>
+          <div style={{'fontWeight': '700'}}>Stack:</div>
           {stack.map((s,idx) => {
           if (idx === stack.length-1) {
             return s;
@@ -152,11 +146,11 @@ function Project({
         })}
         </Information>
         <Information>
-          <div style={{'font-weight': '700'}}>Packages:</div>
+          <div style={{'fontWeight': '700'}}>Packages:</div>
           <List>
             {tools.map(tool => (
-              <ListItem>
-                <FontAwesomeIcon icon={faChevronRight} size='sm' style={{ 'margin-right': '4px' }} />
+              <ListItem key={uuidv4()}>
+                <FontAwesomeIcon icon={faChevronRight} size='sm' style={{ 'marginRight': '4px' }} />
                 {tool}
               </ListItem>
             ))}

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { v4 as uuidv4 } from "uuid";
 
 const Container = styled.div`
   display: flex;
@@ -27,6 +27,8 @@ const TitleCard = styled.div`
 
 const Card = styled.div`
   display: flex;
+  padding: 0px 5px 0px 0px;
+  // border: 2px solid blue;
 `;
 
 
@@ -56,6 +58,7 @@ const Duration = styled.div`
   line-height: 150%;
   display: flex;
   width: 70px;
+  min-width: 70px;
   color: rgb(120, 120, 120);
   // border: 2px solid blue;
 `;
@@ -81,7 +84,7 @@ function Work({ title, company, duration, tasks, imageUrl }) {
       <TitleCard>
         <Card>
           <img src={imageUrl} alt="work-pic" style={{ 'height': '40px' }} />
-          <div style={{ 'display': 'flex', 'flex-direction': 'column', 'margin-left': '10px' }}>
+          <div style={{ 'display': 'flex', 'flexDirection': 'column', 'marginLeft': '10px' }}>
             <Title>{title}</Title>
             <Company>{company}</Company>
           </div>
@@ -90,8 +93,8 @@ function Work({ title, company, duration, tasks, imageUrl }) {
       </TitleCard>
       <List>
         {tasks.map(task => (
-          <ListItem>
-            <FontAwesomeIcon icon={faChevronRight} size='sm' style={{ 'margin-right': '4px' }} />
+          <ListItem key={uuidv4()}>
+            <FontAwesomeIcon icon={faChevronRight} size='sm' style={{ 'marginRight': '4px' }} />
             {task}
           </ListItem>
         ))}
