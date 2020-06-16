@@ -39,6 +39,7 @@ const Title = styled.div`
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   color: rgb(70, 70, 70);
+  margin-right: 6px;
 `;
 
 const Description = styled.div`
