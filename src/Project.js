@@ -125,12 +125,12 @@ function Project({
           <Title>{title}</Title>
           <a href={githubLink} target="_blank" rel="noopener noreferrer">
             <IconLink>
-              <FontAwesomeIcon icon={faGithub} style={{ 'fontSize': '20px' }} />
+              <FontAwesomeIcon icon={faGithub} style={{ 'fontSize': '16px' }} />
             </IconLink>
           </a>
           <a href={websiteLink} target="_blank" rel="noopener noreferrer">
             <IconLink>
-              <FontAwesomeIcon icon={faExternalLinkAlt} style={{ 'fontSize': '20px' }} />
+              <FontAwesomeIcon icon={faExternalLinkAlt} style={{ 'fontSize': '15px' }} />
             </IconLink>
           </a>
         </List>

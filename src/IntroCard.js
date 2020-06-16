@@ -3,6 +3,8 @@ import './IntroCard.css';
 import Navigation from "./Navigation";
 import styled from 'styled-components';
 import profilePicSrc from "./images/profile-pic.jpg";
+import ProfileCarousel from "./ProfileCarousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Intro = styled.div`
   display: flex;
@@ -36,7 +38,7 @@ const Profile = styled.div`
 `;
 
 const ProfilePic = styled.div`
-  width: 25%;
+  width: 60%;
   height: 100%;
   margin-left: 25px;
   // border: 2px solid blue;
@@ -77,10 +79,11 @@ function IntroCard() {
       </Welcome>
       <Profile>
         <ProfilePic>
-          <img src={profilePicSrc} alt="profile-pic" style={{ 'height': '100px' }} />
+          <ProfileCarousel width="140px"/>
+          {/* <img src={profilePicSrc} alt="profile-pic" style={{ 'height': '100px' }} /> */}
         </ProfilePic>
         <AboutMe>
-          I'm a software engineering student based in Oakland, CA. I most recently worked as a Systems Engineer at Siemens, and before that, I built Java Simulation models at a agricultural tech startup called Plenty.
+          I'm a software engineer based in Oakland, CA. I most recently worked as a Fullstack Intern at LiveStack building automated tasks in Express. I worked as a Systems Engineer at Siemens, and before that, I built Java Simulation models at an ag tech startup called Plenty.
         </AboutMe>
       </Profile>
       <Navigation />
