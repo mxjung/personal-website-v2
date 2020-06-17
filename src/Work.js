@@ -4,25 +4,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { v4 as uuidv4 } from "uuid";
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: auto;
-  height: auto;
-  padding: 15px 20px;
-  margin: 10px;
-  background-color: rgb(245, 245, 245);
-  border-radius: 4px;
-  transition: all .2s ease-in-out;
+// import styles
+import {
+  CardContainer,
+  ListItem
+} from './styles/Card';
+import {
+  jobPositionSize,
+  companySize,
+  durationSize
+} from './styles/FontSize';
 
-  &:hover {
-    background-color: rgb(235, 235, 235);
-  }
+const Container = styled(CardContainer)`
+  flex-direction: column;
 `;
 
 const TitleCard = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 6px;
 `;
 
 const Card = styled.div`
@@ -31,9 +31,8 @@ const Card = styled.div`
   // border: 2px solid blue;
 `;
 
-
 const Title = styled.div`
-  font-size: 16px;
+  font-size: ${jobPositionSize};
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   color: rgb(70, 70, 70);
@@ -42,7 +41,7 @@ const Title = styled.div`
 `;
 
 const Company = styled.div`
-  font-size: 14px;
+  font-size: ${companySize};
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   color: rgb(70, 70, 70);
@@ -52,7 +51,7 @@ const Company = styled.div`
 
 
 const Duration = styled.div`
-  font-size: 12px;
+  font-size: ${durationSize};
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   line-height: 150%;
@@ -68,11 +67,7 @@ const List = styled.div`
   flex-direction: column;
 `;
 
-const ListItem = styled.div`
-  font-size: 12px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  color: rgb(120, 120, 120);
+const WorkListItem = styled(ListItem)`
   padding: 2px 10px;
   line-height: 140%;
   text-indent: -10px;
@@ -93,10 +88,10 @@ function Work({ title, company, duration, tasks, imageUrl }) {
       </TitleCard>
       <List>
         {tasks.map(task => (
-          <ListItem key={uuidv4()}>
+          <WorkListItem key={uuidv4()}>
             <FontAwesomeIcon icon={faChevronRight} size='sm' style={{ 'marginRight': '4px' }} />
             {task}
-          </ListItem>
+          </WorkListItem>
         ))}
       </List>
     </Container>

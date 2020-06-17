@@ -5,37 +5,19 @@ import { faChevronRight, faExternalLinkAlt } from '@fortawesome/free-solid-svg-i
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { v4 as uuidv4 } from "uuid";
 
-const Container = styled.div`
-  display: flex;
-  width: auto;
-  // border: 2px solid green;
-  height: auto;
-  padding: 15px 20px;
-  margin: 10px;
-  background-color: rgb(245, 245, 245);
-  // background-color: #a8b2d1;
-  border-radius: 4px;
-
-
-  &:hover {
-    transition: all .2s ease-in-out;
-    // transform: scale(1.05);
-    background-color: rgb(235, 235, 235);
-
-    // img {
-    //   transition: all .18s ease-in-out;
-    //   opacity: 0.5;
-    //   filter: alpha(opacity=100);
-    // }
-  }
-
-  &:active {
-    // transform: scale(1);
-  }
-`;
+// import styles
+import {
+  CardContainer,
+  ListItem
+} from './styles/Card';
+import {
+  titleSize,
+  descriptionSize,
+  listSize
+} from './styles/FontSize';
 
 const Title = styled.div`
-  font-size: 20px;
+  font-size: ${titleSize};
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   color: rgb(70, 70, 70);
@@ -43,7 +25,7 @@ const Title = styled.div`
 `;
 
 const Description = styled.div`
-  font-size: 12px;
+  font-size: ${descriptionSize};
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   line-height: 150%;
@@ -52,7 +34,7 @@ const Description = styled.div`
 `;
 
 const Information = styled.div`
-  font-size: 12px;
+  font-size: ${listSize};
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   line-height: 150%;
@@ -67,30 +49,19 @@ const List = styled.div`
   line-height: 130%;
 `;
 
-const ListItem = styled.div`
-  font-size: 12px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  color: rgb(120, 120, 120);
-  padding: 2px 10px 2px 0px;
-`;
-
 const LeftPanel = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0px 15px 0px 0px;
   width: 60%;
-  // border: 2px solid green;
 `;
 
 const RightPanel = styled.div`
   display: flex;
   flex-direction: column;
-  // flex-grow: 1;
   width: 40%;
   align-items: center;
   justify-content: center;
-  // border: 2px solid red;
 `;
 
 const IconLink = styled.div`
@@ -120,7 +91,7 @@ function Project({
   websiteLink
 }) {
   return (
-    <Container>
+    <CardContainer>
       <LeftPanel>
         <List>
           <Title>{title}</Title>
@@ -161,7 +132,7 @@ function Project({
       <RightPanel>
         <img src={imageUrl} alt="project-pic" style={{ 'width': '100%', 'height': 'auto'}} />
       </RightPanel>
-    </Container>
+    </CardContainer>
   );
 }
 

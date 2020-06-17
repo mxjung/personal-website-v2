@@ -5,29 +5,18 @@ import Project from './Project';
 import projectData from "./projectData";
 import { v4 as uuidv4 } from "uuid";
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  // border: 2px solid green;
-  height: auto;
-`;
+// import styles
+import Container from './styles/Container';
+import Title from './styles/Title';
 
-const Title = styled.h1`
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  text-align: center;
-  color: #115293;
-  // border: 2px solid blue;
-  height: auto;
-  display: flex;
-  width: 90%;
-  margin: 10px;
+// We don't want margin top to be 20px (as it is in Container)
+const ProjectContainer = styled(Container)`
+  margin-top: 0px;
 `;
 
 function ProjectList() {
   return (
-    <Container>
+    <ProjectContainer>
       <div id="section1" >
         <Title style={{ 'marginTop': '20px' }} >
           Things I've Built
@@ -45,7 +34,7 @@ function ProjectList() {
           />
         ))}
       </div>
-    </Container>
+    </ProjectContainer>
   );
 }
 
