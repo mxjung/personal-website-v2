@@ -22,6 +22,7 @@ const ListItem = styled.div`
   font-weight: 500;
   color: rgb(120, 120, 120);
   padding: 2px 10px 2px 0px;
+  margin-top: 4px;
 `;
 
 export {

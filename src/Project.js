@@ -49,6 +49,10 @@ const List = styled.div`
   line-height: 130%;
 `;
 
+const ProjectListItem = styled(ListItem)`
+  margin-top: 0px;
+`;
+
 const LeftPanel = styled.div`
   display: flex;
   flex-direction: column;
@@ -121,10 +125,10 @@ function Project({
           <div style={{'fontWeight': '700'}}>Packages:</div>
           <List>
             {tools.map(tool => (
-              <ListItem key={uuidv4()}>
+              <ProjectListItem key={uuidv4()}>
                 <FontAwesomeIcon icon={faChevronRight} size='sm' style={{ 'marginRight': '4px' }} />
                 {tool}
-              </ListItem>
+              </ProjectListItem>
             ))}
           </List>
         </Information>
