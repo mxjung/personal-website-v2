@@ -10,7 +10,7 @@ const projectData = [
     tools: ["Redux", "Immer"],
     imageUrl: microblogLogo,
     githubLink: 'https://github.com/mxjung/microblog-frontend',
-    websiteLink: 'https://sad-easley-3675c0.netlify.app/'
+    websiteLink: 'https://microblog-react.netlify.app/'
   },
   {
     title: "Jobly",
@@ -19,7 +19,7 @@ const projectData = [
     tools: ["axios", "JSON Web Token", "Bcrypt", "Jest"],
     imageUrl: joblyLogo,
     githubLink: 'https://github.com/mxjung/react-jobly',
-    websiteLink: ''
+    websiteLink: 'https://jobly-react.netlify.app/'
   },
   {
     title: "Warbler",
