@@ -5,7 +5,7 @@ import joblyLogo from './images/jobly-logo.png';
 const projectData = [
   {
     title: "Microblog",
-    description: "A minimal blogging site where users can create blog posts, leave comments on posts, and upvote/downvote posts",
+    description: "A minimal blogging site where users can create blog posts, leave comments on posts, and upvote/downvote posts. CURRENTLY FIXING DB ISSUES",
     stack: ["PostgreSQL", "Express", "React", "Node.js"],
     tools: ["Redux", "Immer"],
     imageUrl: microblogLogo,
